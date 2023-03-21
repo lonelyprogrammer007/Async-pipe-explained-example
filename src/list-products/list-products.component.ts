@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import {
   ChangeDetectionStrategy,
+  ChangeDetectorRef,
   Component,
   OnDestroy,
   OnInit,
@@ -24,6 +25,7 @@ export class ListProductsComponent implements OnInit, OnDestroy {
   productObserver = {
     next: (data: IProduct[]) => {
       this.products = data;
+      this.cd.markForCheck();
     },
     error: (error: any) => {
       console.log(error);
@@ -33,7 +35,7 @@ export class ListProductsComponent implements OnInit, OnDestroy {
     },
   };
 
-  constructor(private appService: AppService) {}
+  constructor(private appService: AppService, private cd: ChangeDetectorRef) {}
 
   ngOnInit(): void {
     this.productSubscription = this.appService.Products$.subscribe(
