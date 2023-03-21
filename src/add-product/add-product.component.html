@@ -1,0 +1,29 @@
+<form (ngSubmit)="addProduct()" [formGroup]="productForm">
+  <input
+    formControlName="Id"
+    type="text"
+    class="form-control"
+    placeholder="Enter ID"
+  />
+  <input
+    formControlName="Title"
+    type="text"
+    class="form-control"
+    placeholder="Enter Title"
+  />
+  <input
+    formControlName="Price"
+    type="text"
+    class="form-control"
+    placeholder="Enter Price"
+  />
+  <input
+    formControlName="inStock"
+    type="text"
+    class="form-control"
+    placeholder="Enter Stock "
+  />
+  <button [disabled]="productForm.invalid" class="btn btn-default">
+    Add Product
+  </button>
+</form>

@@ -1,0 +1,18 @@
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Title</th>
+      <th>Price</th>
+      <th>inStock</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of products">
+      <td>{{ p.Id }}</td>
+      <td>{{ p.Title }}</td>
+      <td>{{ p.Price }}</td>
+      <td>{{ p.inStock }}</td>
+    </tr>
+  </tbody>
+</table>
