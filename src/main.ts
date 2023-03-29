@@ -21,6 +21,7 @@ import { ListProductAsyncPipeComponent } from './list-product-async-pipe/list-pr
   <app-list-products></app-list-products>
   <hr/>
   <app-list-product-async-pipe></app-list-product-async-pipe>
+  <app-list-product-async-pipe></app-list-product-async-pipe>
   `,
 })
 export class App {
